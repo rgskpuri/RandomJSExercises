@@ -1,0 +1,84 @@
+#parentContainer{
+    width: 80vw;
+    height: 50vh;
+    background-color: rgb(76, 139, 175);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.styledbutton{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: auto;
+}
+
+#gameContainer{
+    width: 80vw;
+    height: 70vh;
+    background-color: rgb(76, 139, 175);
+    margin: auto;
+    display: none;
+    align-items: stretch;
+    justify-content: stretch;
+}
+
+#playerDiv{
+    margin-bottom: 10px;
+    border-bottom: 4px solid rgb(213, 215, 236);
+    display: inline-block;
+    flex-grow: 1;
+}
+
+#enemyDiv{
+    display: inline-block;
+    flex-grow: 1;
+}
+
+#healthProgressBar
+{
+    height: 24px;
+    width: 100%;
+    background-color: olive;
+    font: small-caps;
+    font-size: .8em;
+    color: white;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#healsRemainingProgressBar
+{
+    height: 24px;
+    width: 100%;
+    background-color: olive;
+    font: small-caps;
+    font-size: .8em;
+    color: white;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#winsProgressBar
+{
+    height: 24px;
+    width: 100%;
+    background-color: olive;
+    font: small-caps;
+    font-size: .8em;
+    color: white;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    vertical-align: middle;
+    text-align: center;
+}
