@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,28 @@
     <title>Grant VS You</title>
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
+
 <body>
     <div id="parentContainer">
         <input type="button" class="styledbutton" id="startButton" value="Start">
     </div>
     <div id="gameContainer">
         <div id="playerDiv">
-            <div id="healthProgressBar">Health 40</div>
-            <div id="healsRemainingProgressBar">Heals 2</div>
-            <div id="winsProgressBar">Wins 0</div>
-        </div> 
-        <div id="enemyDiv"></div>
+            <div class="progressBar" id="healthProgressBar">Health 40/40</div>
+            <div class="progressBar" id="healsRemainingProgressBar">Heals 2/2</div>
+            <div class="progressBar" id="winsProgressBar">Wins 0/5</div>
+            <div id="playerOptions">
+                <input type="button" class="styledbutton playerbutton" id="AttackButton" value="Attack">
+                <input type="button" class="styledbutton playerbutton" id="HealButton" value="Heal">
+                <input type="button" class="styledbutton playerbutton" id="QuitButton" value="Quit">
+            </div>
+        </div>
+        <div id="enemyDiv">
+            <div class="progressBar" id="grantHealthProgressBar">Health 10/10</div>
+        </div>
+        <textarea id="gameStatus"></textarea>
     </div>
     <script src="index.js"></script>
 </body>
+
 </html>
