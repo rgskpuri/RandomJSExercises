@@ -113,8 +113,12 @@ healButton.onclick = function ()
 }
 
 function changeWinLevel(winLevel)
-{BarGrant.innerText = `Health ${theEnemy.health}/10`;
-    
+{
+    theEnemy.health = 10;
+    let pBarGrant = document.getElementById("grantHealthProgressBar");
+    pBarGrant.style.background = `linear-gradient(to right, #ffdd97 0%,#ffdd97 ${theEnemy.health*10}%,#97ffd7 ${theEnemy.health*10}%,#97ffd7 100%)`;
+    pBarGrant.innerText = `Health ${theEnemy.health}/10`;
+
     let pBarWins = document.getElementById("winsProgressBar");
     pBarWins.style.background = `linear-gradient(to right, #ffdd97 0%,#ffdd97 ${winLevel*20}%,#97ffd7 ${winLevel*20}%,#97ffd7 100%)`;
     pBarWins.innerText = `Wins ${winLevel}/5`;
