@@ -106,11 +106,24 @@ healButton.onclick = function ()
         healButton.disabled = true;
     }
     thePlayer.health += totalHealAmount;
+ 
+    let hBar = document.getElementById("healsRemainingProgressBar");
+    if(thePlayer.healsRemaining===1)
+    {
+        hBar.style.background = `linear-gradient(to right, #ffdd97 0%,#ffdd97 50%,#97ffd7 50%,#97ffd7 100%)`;
+        hBar.innerText = `Heals 1/2`;    
+    }
+    else if(thePlayer.healsRemaining===0)
+    {
+        hBar.style.background = `linear-gradient(to right, #ffdd97 0%,#ffdd97 100%`;
+        hBar.innerText = `Heals 0/2`;           
+    }
+
     let pBar = document.getElementById("healthProgressBar");
     pBar.style.background = `linear-gradient(to right, #ffdd97 0%,#ffdd97 ${thePlayer.health*2.5}%,#97ffd7 ${thePlayer.health*2.5}%,#97ffd7 100%)`;
     pBar.innerText = `Health ${thePlayer.health}/40`;
     updateText(`${thePlayer.playerName} heals for ${totalHealAmount}`);
-}
+};
 
 function changeWinLevel(winLevel)
 {
